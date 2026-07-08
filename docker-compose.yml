@@ -1,0 +1,59 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: catalogforge
+      POSTGRES_USER: catalogforge
+      POSTGRES_PASSWORD: catalogforge
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U catalogforge -d catalogforge"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  redis:
+    image: redis:7-alpine
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  api:
+    build: ./backend
+    environment:
+      DATABASE_URL: postgresql+psycopg://catalogforge:catalogforge@postgres:5432/catalogforge
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: demo-change-me
+      STORAGE_BACKEND: local
+      LOCAL_STORAGE_PATH: /workspace/demo_data/source_documents
+      OCR_PROVIDER: deterministic
+      LLM_PROVIDER: deterministic
+    ports: ["8000:8000"]
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    volumes:
+      - ./demo_data:/workspace/demo_data
+  worker:
+    build: ./backend
+    command: ["python", "-m", "app.worker"]
+    environment:
+      DATABASE_URL: postgresql+psycopg://catalogforge:catalogforge@postgres:5432/catalogforge
+      REDIS_URL: redis://redis:6379/0
+      JWT_SECRET: demo-change-me
+      STORAGE_BACKEND: local
+      LOCAL_STORAGE_PATH: /workspace/demo_data/source_documents
+    depends_on:
+      postgres: { condition: service_healthy }
+      redis: { condition: service_healthy }
+    volumes:
+      - ./demo_data:/workspace/demo_data
+  web:
+    build: ./frontend
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000/api/v1
+    ports: ["3000:3000"]
+    depends_on: [api]
+volumes:
+  postgres_data:

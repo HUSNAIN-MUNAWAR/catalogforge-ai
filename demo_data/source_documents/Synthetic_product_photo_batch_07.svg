@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="480" viewBox="0 0 640 480">
+      <rect width="640" height="480" fill="#f6f1e8"/><rect x="44" y="42" width="552" height="396" rx="26" fill="#e9d8cf"/>
+      <path d="M210 310c0-86 49-144 110-144s110 58 110 144" fill="none" stroke="#202322" stroke-width="20" stroke-linecap="round"/>
+      <rect x="238" y="234" width="164" height="116" rx="24" fill="#f9f7f1" stroke="#202322" stroke-width="10"/>
+      <text x="320" y="408" text-anchor="middle" font-family="Arial" font-size="22" fill="#202322">SYNTHETIC • PH</text>
+    </svg>
