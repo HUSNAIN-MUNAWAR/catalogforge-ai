@@ -1,4 +1,4 @@
-.PHONY: install-api install-web api web worker migrate seed test lint typecheck screenshots compose-up compose-down import-tests phase3-tests verify-backend
+.PHONY: install-api install-web api web worker migrate seed animation test lint typecheck screenshots compose-up compose-down import-tests phase3-tests verify-backend
 install-api:
 	cd backend && python -m pip install -e '.[dev]'
 install-web:
@@ -11,6 +11,8 @@ migrate:
 	cd backend && alembic upgrade head
 seed:
 	cd backend && python -m app.seed
+animation:
+	python scripts/generate_animation_sequence.py
 worker:
 	cd backend && python -m app.worker
 import-tests:

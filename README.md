@@ -88,6 +88,16 @@ All screenshots below come from the real app using synthetic seeded data.
 | --- | --- |
 | ![](assets/screenshots/14-lineage.png) | ![](assets/screenshots/16-governance.png) |
 
+## Synthetic intake reference reel
+
+The repository includes a reproducible animation of the supplier-to-catalog path at [`frontend/public/animation/catalogforge-intake-reel.html`](frontend/public/animation/catalogforge-intake-reel.html). It is generated from the same intake, deterministic extraction, validation, and duplicate-scoring services used by the demo API.
+
+```bash
+py -3.12 scripts/generate_animation_sequence.py
+```
+
+The source checksum, candidate preview, model boundary, and scene metrics are recorded in [`docs/animation/catalogforge_intake_sequence.json`](docs/animation/catalogforge_intake_sequence.json). The fixture is synthetic, the parser is deterministic, and the destination is a mock connector; the reel does not claim learned-model accuracy or live delivery.
+
 ## Technology stack
 
 - Frontend: Next.js 15, React 19, TypeScript, TanStack Query, Tailwind CSS, Playwright.
