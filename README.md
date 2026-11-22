@@ -98,6 +98,31 @@ py -3.12 scripts/generate_animation_sequence.py
 
 The source checksum, candidate preview, model boundary, and scene metrics are recorded in [`docs/animation/catalogforge_intake_sequence.json`](docs/animation/catalogforge_intake_sequence.json). The fixture is synthetic, the parser is deterministic, and the destination is a mock connector; the reel does not claim learned-model accuracy or live delivery.
 
+### Real local runtime evidence
+
+For an execution trace rather than an HTML presentation, run:
+
+```powershell
+py -3.12 -u scripts/generate_real_runtime_evidence.py
+# or: make runtime-evidence
+```
+
+The runner executes the repository's real `deterministic_extract`, validation,
+and duplicate-scoring functions over the checked-in supplier CSV and writes:
+
+```text
+docs/animation/runtime-evidence/catalogforge-runtime.mp4
+docs/animation/runtime-evidence/catalogforge-runtime-poster.png
+docs/animation/runtime-evidence/catalogforge-candidates.csv
+docs/animation/runtime-evidence/catalogforge-runtime-summary.json
+```
+
+The JSON report records the source checksum, all 12 candidates, source-row
+evidence, validation findings, runtime versions, and output hashes. CatalogForge
+has no learned checkpoint in this local path: this is a deterministic parser and
+rules trace over synthetic input, not a learned-model or production-accuracy
+claim. The older HTML reel remains a legacy presentation only.
+
 ## Technology stack
 
 - Frontend: Next.js 15, React 19, TypeScript, TanStack Query, Tailwind CSS, Playwright.

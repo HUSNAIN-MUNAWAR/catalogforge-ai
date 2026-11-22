@@ -1,0 +1,512 @@
+{
+  "run_type": "catalogforge_real_local_runtime_video",
+  "generated_at_utc": "2026-11-22T15:27:01.529327+00:00",
+  "command": "py -3.12 -u scripts/generate_real_runtime_evidence.py",
+  "source": {
+    "path": "demo_data\\source_documents\\Synthetic_vendor_export_01.csv",
+    "filename": "Synthetic_vendor_export_01.csv",
+    "type": "CSV",
+    "mime_type": "text/csv",
+    "bytes": 1580,
+    "sha256": "2aa791b20212c70a3be2e2adbaf36448627a3a7e48b1a8315ddd5311930685c9",
+    "rows": 12,
+    "columns": [
+      "title",
+      "sku",
+      "brand",
+      "category",
+      "price",
+      "inventory",
+      "barcode",
+      "material",
+      "color",
+      "weight",
+      "dimensions"
+    ],
+    "mapping": {
+      "title": "title",
+      "sku": "sku",
+      "brand": "brand",
+      "category": "category",
+      "price": "price",
+      "inventory": "inventory",
+      "barcode": "barcode",
+      "material": "material",
+      "color": "color",
+      "weight": "weight",
+      "dimensions": "dimensions"
+    }
+  },
+  "algorithm": {
+    "extraction": "backend/app/services/pipeline.py::deterministic_extract",
+    "validation": "backend/app/services/pipeline.py::run_validations",
+    "duplicate_scoring": "backend/app/services/duplicates.py::score",
+    "learned_model": null,
+    "checkpoint": null,
+    "external_keys_used": false,
+    "duplicate_signal_note": "The duplicate scorer's image_embedding value is a fixed synthetic abstraction; no embedding model executed.",
+    "claim_boundary": "Deterministic parser and rules over synthetic demo data; not a learned-model accuracy benchmark."
+  },
+  "runtime": {
+    "python": "3.12.10",
+    "opencv": "4.13.0",
+    "numpy": "2.5.1",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "device": "cpu"
+  },
+  "candidates": [
+    {
+      "title": "Woven Storage Basket",
+      "sku": "NOR-0201",
+      "brand": "Northern Atelier",
+      "category": "Home / Storage",
+      "price": 18.0,
+      "inventory": 10,
+      "barcode": "890101000000",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 2,
+        "bbox": {
+          "x": 72,
+          "y": 150,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Woven Storage Basket"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Linen Table Runner",
+      "sku": "NOR-0202",
+      "brand": "Northern Atelier",
+      "category": "Home / Table Linen",
+      "price": 22.0,
+      "inventory": 14,
+      "barcode": "890101000001",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 3,
+        "bbox": {
+          "x": 72,
+          "y": 174,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Linen Table Runner"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Ceramic Pouring Bowl",
+      "sku": "NOR-0203",
+      "brand": "Northern Atelier",
+      "category": "Kitchen / Serveware",
+      "price": 26.0,
+      "inventory": 18,
+      "barcode": "890101000002",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 4,
+        "bbox": {
+          "x": 72,
+          "y": 198,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Ceramic Pouring Bowl"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Oak Serving Board",
+      "sku": "NOR-0204",
+      "brand": "Northern Atelier",
+      "category": "Kitchen / Boards",
+      "price": 30.0,
+      "inventory": 22,
+      "barcode": "890101000003",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 5,
+        "bbox": {
+          "x": 72,
+          "y": 222,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Oak Serving Board"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Glass Pantry Jar",
+      "sku": "NOR-0205",
+      "brand": "Northern Atelier",
+      "category": "Kitchen / Storage",
+      "price": 34.0,
+      "inventory": 26,
+      "barcode": "890101000004",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 6,
+        "bbox": {
+          "x": 72,
+          "y": 246,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Glass Pantry Jar"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Cotton Napkin Set",
+      "sku": "NOR-0206",
+      "brand": "Northern Atelier",
+      "category": "Lighting / Table Lamps",
+      "price": 38.0,
+      "inventory": 30,
+      "barcode": "890101000005",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 7,
+        "bbox": {
+          "x": 72,
+          "y": 270,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Cotton Napkin Set"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Brass Table Lamp",
+      "sku": "NOR-0207",
+      "brand": "Northern Atelier",
+      "category": "Bath / Towels",
+      "price": 42.0,
+      "inventory": 34,
+      "barcode": "890101000006",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 8,
+        "bbox": {
+          "x": 72,
+          "y": 294,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Brass Table Lamp"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Stoneware Desk Tray",
+      "sku": "NOR-0208",
+      "brand": "Northern Atelier",
+      "category": "Office / Desk Accessories",
+      "price": 46.0,
+      "inventory": 38,
+      "barcode": "890101000007",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 9,
+        "bbox": {
+          "x": 72,
+          "y": 318,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Stoneware Desk Tray"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Woven Storage Basket",
+      "sku": "NOR-0209",
+      "brand": "Northern Atelier",
+      "category": "Home / Storage",
+      "price": 50.0,
+      "inventory": 42,
+      "barcode": "890101000008",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 10,
+        "bbox": {
+          "x": 72,
+          "y": 342,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Woven Storage Basket"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Linen Table Runner",
+      "sku": "NOR-0210",
+      "brand": "Northern Atelier",
+      "category": "Home / Table Linen",
+      "price": 54.0,
+      "inventory": 46,
+      "barcode": "890101000009",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 11,
+        "bbox": {
+          "x": 72,
+          "y": 366,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Linen Table Runner"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Ceramic Pouring Bowl",
+      "sku": "NOR-0211",
+      "brand": "Northern Atelier",
+      "category": "Kitchen / Serveware",
+      "price": 58.0,
+      "inventory": 50,
+      "barcode": "890101000010",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 12,
+        "bbox": {
+          "x": 72,
+          "y": 390,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Ceramic Pouring Bowl"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    },
+    {
+      "title": "Oak Serving Board",
+      "sku": "NOR-0212",
+      "brand": "Northern Atelier",
+      "category": "Kitchen / Boards",
+      "price": 62.0,
+      "inventory": 54,
+      "barcode": "890101000011",
+      "confidence": 0.95,
+      "attributes": {
+        "material": "Natural fiber",
+        "color": "Natural",
+        "weight": "0.45 kg",
+        "dimensions": "32 x 22 cm"
+      },
+      "evidence": {
+        "page": 1,
+        "sheet": null,
+        "row": 13,
+        "bbox": {
+          "x": 72,
+          "y": 414,
+          "w": 440,
+          "h": 18
+        },
+        "source_text": "Oak Serving Board"
+      },
+      "validations": [],
+      "blocking_validation_count": 0,
+      "completeness_score": 100.0
+    }
+  ],
+  "scenario": {
+    "vendor": "Northern Atelier",
+    "destination": "Shopify mock",
+    "candidate_count": 12,
+    "validation_finding_count": 0,
+    "blocking_validation_count": 0,
+    "all_candidates_pass_validation": true,
+    "duplicate": {
+      "score": 0.974,
+      "signals": {
+        "normalized_sku": 1.0,
+        "barcode": 1.0,
+        "title": 0.9,
+        "brand": 1.0,
+        "category": 1.0,
+        "attribute_overlap": 1.0,
+        "image_embedding": 0.88
+      }
+    }
+  },
+  "events": [
+    {
+      "id": "source-received",
+      "title": "Supplier file received",
+      "detail": "Synthetic_vendor_export_01.csv entered the local intake boundary.",
+      "metric": "CSV / 1580 bytes"
+    },
+    {
+      "id": "integrity-checked",
+      "title": "Integrity checked",
+      "detail": "The executed intake inspection recorded the MIME type and SHA-256.",
+      "metric": "sha256 2aa791b20212c70a"
+    },
+    {
+      "id": "mapping-inferred",
+      "title": "Columns mapped",
+      "detail": "The actual parser inferred canonical product fields from the CSV header.",
+      "metric": "11 of 11 columns mapped"
+    },
+    {
+      "id": "candidates-extracted",
+      "title": "Candidates extracted",
+      "detail": "deterministic_extract returned the candidate records preserved in the CSV.",
+      "metric": "12 candidates / 95% mean confidence"
+    },
+    {
+      "id": "rules-evaluated",
+      "title": "Rules evaluated",
+      "detail": "The real validation function ran against every extracted candidate.",
+      "metric": "0 findings / 0 blocking"
+    },
+    {
+      "id": "duplicate-scored",
+      "title": "Duplicate candidate scored",
+      "detail": "The repository duplicate scorer compared an actual candidate with a derived review pair.",
+      "metric": "similarity 97.4% / human review"
+    },
+    {
+      "id": "mock-release-gated",
+      "title": "Mock release gated",
+      "detail": "The local destination is a mock connector; no external system was changed.",
+      "metric": "Shopify mock / external keys false"
+    }
+  ],
+  "outputs": {
+    "video": "docs\\animation\\runtime-evidence\\catalogforge-runtime.mp4",
+    "poster": "docs\\animation\\runtime-evidence\\catalogforge-runtime-poster.png",
+    "candidates_csv": "docs\\animation\\runtime-evidence\\catalogforge-candidates.csv",
+    "sha256": {
+      "docs\\animation\\runtime-evidence\\catalogforge-runtime.mp4": "519cb58b96af699756f49c3de3cf98a9cee3da1019f3a1e0cf82aa518eef93b5",
+      "docs\\animation\\runtime-evidence\\catalogforge-runtime-poster.png": "85a9c0811674ccde3feaa3479d225172b6acb13e3c8cfc360ee426cc2e70b7b0",
+      "docs\\animation\\runtime-evidence\\catalogforge-candidates.csv": "dc0003fa49710facd612d3981abbb1af0852bbe88006d5f43d8df29dbf02fa24"
+    }
+  },
+  "interpretation": [
+    "The video is generated from one local execution of the repository parser, validators, and duplicate scorer.",
+    "The input fixture is synthetic by repository design; it is not real customer data.",
+    "There is no learned model or checkpoint in this local path, so confidence values are parser outputs, not model accuracy.",
+    "The duplicate scorer reports a fixed synthetic image_embedding abstraction; no embedding model executed.",
+    "The older HTML reel is retained as a legacy synthetic presentation and is not counted as runtime evidence."
+  ]
+}

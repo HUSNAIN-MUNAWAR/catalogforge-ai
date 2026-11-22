@@ -1,0 +1,13 @@
+index,title,sku,brand,category,price,inventory,barcode,confidence,blocking_validation_count,completeness_score,source_row
+1,Woven Storage Basket,NOR-0201,Northern Atelier,Home / Storage,18.0,10,890101000000,0.95,0,100.0,2
+2,Linen Table Runner,NOR-0202,Northern Atelier,Home / Table Linen,22.0,14,890101000001,0.95,0,100.0,3
+3,Ceramic Pouring Bowl,NOR-0203,Northern Atelier,Kitchen / Serveware,26.0,18,890101000002,0.95,0,100.0,4
+4,Oak Serving Board,NOR-0204,Northern Atelier,Kitchen / Boards,30.0,22,890101000003,0.95,0,100.0,5
+5,Glass Pantry Jar,NOR-0205,Northern Atelier,Kitchen / Storage,34.0,26,890101000004,0.95,0,100.0,6
+6,Cotton Napkin Set,NOR-0206,Northern Atelier,Lighting / Table Lamps,38.0,30,890101000005,0.95,0,100.0,7
+7,Brass Table Lamp,NOR-0207,Northern Atelier,Bath / Towels,42.0,34,890101000006,0.95,0,100.0,8
+8,Stoneware Desk Tray,NOR-0208,Northern Atelier,Office / Desk Accessories,46.0,38,890101000007,0.95,0,100.0,9
+9,Woven Storage Basket,NOR-0209,Northern Atelier,Home / Storage,50.0,42,890101000008,0.95,0,100.0,10
+10,Linen Table Runner,NOR-0210,Northern Atelier,Home / Table Linen,54.0,46,890101000009,0.95,0,100.0,11
+11,Ceramic Pouring Bowl,NOR-0211,Northern Atelier,Kitchen / Serveware,58.0,50,890101000010,0.95,0,100.0,12
+12,Oak Serving Board,NOR-0212,Northern Atelier,Kitchen / Boards,62.0,54,890101000011,0.95,0,100.0,13
