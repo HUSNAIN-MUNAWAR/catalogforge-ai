@@ -16,5 +16,5 @@ test('phase 3 command palette exposes launch readiness action', async ({ page })
   await login(page);
   await page.keyboard.press(process.platform === 'darwin' ? 'Meta+K' : 'Control+K');
   await page.getByPlaceholder('Search products, vendors, documents, or actions…').fill('launch');
-  await expect(page.getByText('Launch readiness')).toBeVisible();
+  await expect(page.getByRole('link', { name: 'Launch readiness', exact: true }).first()).toBeVisible();
 });
